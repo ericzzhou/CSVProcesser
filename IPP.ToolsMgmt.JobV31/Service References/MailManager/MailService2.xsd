@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://oversea.newegg.com/Framework/EMail/DataContract" elementFormDefault="qualified" targetNamespace="http://oversea.newegg.com/Framework/EMail/DataContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="MailEncoding">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UTF8" />
+      <xs:enumeration value="ASCII" />
+      <xs:enumeration value="UTF32" />
+      <xs:enumeration value="Unicode" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MailEncoding" nillable="true" type="tns:MailEncoding" />
+  <xs:complexType name="MailContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlternateViews" nillable="true" type="tns:ArrayOfMailAlternateView" />
+      <xs:element minOccurs="0" name="Attachments" nillable="true" type="tns:ArrayOfMailAttachment" />
+      <xs:element minOccurs="0" name="BCC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BodyEncoding" type="tns:MailEncoding" />
+      <xs:element minOccurs="0" name="CC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="From" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsBodyHtml" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Priority" type="tns:MailPriority" />
+      <xs:element minOccurs="0" name="ReplyTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubjectEncoding" type="tns:MailEncoding" />
+      <xs:element minOccurs="0" name="To" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TrackingInfo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailContract" nillable="true" type="tns:MailContract" />
+  <xs:complexType name="ArrayOfMailAlternateView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MailAlternateView" nillable="true" type="tns:MailAlternateView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMailAlternateView" nillable="true" type="tns:ArrayOfMailAlternateView" />
+  <xs:complexType name="MailAlternateView">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Encoding" type="tns:MailEncoding" />
+      <xs:element minOccurs="0" name="LinkedResources" nillable="true" type="tns:ArrayOfMailLinkedResource" />
+      <xs:element minOccurs="0" name="MediaType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailAlternateView" nillable="true" type="tns:MailAlternateView" />
+  <xs:complexType name="ArrayOfMailLinkedResource">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MailLinkedResource" nillable="true" type="tns:MailLinkedResource" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMailLinkedResource" nillable="true" type="tns:ArrayOfMailLinkedResource" />
+  <xs:complexType name="MailLinkedResource">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentStream" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailLinkedResource" nillable="true" type="tns:MailLinkedResource" />
+  <xs:complexType name="ArrayOfMailAttachment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MailAttachment" nillable="true" type="tns:MailAttachment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMailAttachment" nillable="true" type="tns:ArrayOfMailAttachment" />
+  <xs:complexType name="MailAttachment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FileContent" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MediaType" type="tns:MediaType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailAttachment" nillable="true" type="tns:MailAttachment" />
+  <xs:simpleType name="MediaType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="GIF" />
+      <xs:enumeration value="JPEG" />
+      <xs:enumeration value="TIFF" />
+      <xs:enumeration value="PDF" />
+      <xs:enumeration value="RTF" />
+      <xs:enumeration value="SOAP" />
+      <xs:enumeration value="ZIP" />
+      <xs:enumeration value="Other" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MediaType" nillable="true" type="tns:MediaType" />
+  <xs:simpleType name="MailPriority">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Low" />
+      <xs:enumeration value="High" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MailPriority" nillable="true" type="tns:MailPriority" />
+</xs:schema>

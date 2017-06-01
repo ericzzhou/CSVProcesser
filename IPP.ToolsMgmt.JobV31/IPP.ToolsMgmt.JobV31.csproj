@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{538C62FF-7B05-47D5-8C99-F273123AE7DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IPP.ToolsMgmt.JobV31</RootNamespace>
+    <AssemblyName>IPP.ToolsMgmt.JobV31</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\Lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="IPP.CN.IM.Core.Entity">
+      <HintPath>..\Lib\IPP.CN.IM.Core.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="IPP.CN.IM.Core.Interface">
+      <HintPath>..\Lib\IPP.CN.IM.Core.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="IPP.Oversea.CN.OrderMgmt.ServiceInterfaces">
+      <HintPath>..\Lib\IPP.Oversea.CN.OrderMgmt.ServiceInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newegg.Oversea.Framework.CacheProvider, Version=3.1.6.9, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Newegg.Oversea.Framework.CacheProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Newegg.Oversea.Framework.Contract, Version=3.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Newegg.Oversea.Framework.Contract.dll</HintPath>
+    </Reference>
+    <Reference Include="Newegg.Oversea.Framework.Core, Version=3.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Newegg.Oversea.Framework.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newegg.Oversea.Framework.Data, Version=3.1.5.8, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Newegg.Oversea.Framework.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newegg.Oversea.Framework.DataConfiguration, Version=3.1.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Newegg.Oversea.Framework.DataConfiguration.dll</HintPath>
+    </Reference>
+    <Reference Include="Newegg.Oversea.Framework.JobConsole.ClientInterface, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Newegg.Oversea.Framework.JobConsole.ClientInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="Newegg.Oversea.Framework.ServiceConsole.Client, Version=3.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Newegg.Oversea.Framework.ServiceConsole.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Newegg.Oversea.Framework.ServiceConsole.Interface">
+      <HintPath>..\Lib\Newegg.Oversea.Framework.ServiceConsole.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Newegg.Oversea.Framework.Utilities, Version=3.1.6.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\sxtfs02\IPP\03_Code\01_SourceCode\ReferenceLib\Framework\Newegg.Oversea.Framework.Utilities.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BIZ\Command_CenterBP.cs" />
+    <Compile Include="CSV\CsvStreamReader.cs" />
+    <Compile Include="CSV\CsvStreamWriter.cs" />
+    <Compile Include="DataAccess\Command_CenterDA.cs" />
+    <Compile Include="Entity\MappingConfiguration.cs" />
+    <Compile Include="Entity\ProductB2BSettlementInfo.cs" />
+    <Compile Include="Entity\TruesightStatistics.cs" />
+    <Compile Include="library\DownloadHelper.cs" />
+    <Compile Include="library\GZipHelper.cs" />
+    <Compile Include="library\ZipHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider\JobAutoRun.cs" />
+    <Compile Include="Service References\MailManager\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\MailManager\MailManager.wsdl" />
+    <None Include="Service References\MailManager\MailService.wsdl" />
+    <None Include="Service References\MailManager\MailService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MailManager\MailService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MailManager\MailService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MailManager\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MailManager\MailService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MailManager\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MailManager\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MailManager\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSVProcesser.Library\CSVProcesser.Library.csproj">
+      <Project>{a4518a37-2c6d-44f8-a1d8-6254a3c011c8}</Project>
+      <Name>CSVProcesser.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

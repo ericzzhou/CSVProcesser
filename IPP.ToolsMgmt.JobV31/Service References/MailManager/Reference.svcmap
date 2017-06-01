@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="98c4a54f-e864-46fd-9b5d-74dcd5c8ff90" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ssqapp02:8080/Mail/V31/MailService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MailService.xsd" MetadataType="Schema" ID="5d3f5166-cba2-4531-998a-6b71c50282dd" SourceId="1" SourceUrl="http://ssqapp02.buyabs.corp:8080/Mail/V31/MailService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MailService.wsdl" MetadataType="Wsdl" ID="cbb73706-cba6-40e1-ac0b-f5763ee2f922" SourceId="1" SourceUrl="http://ssqapp02.buyabs.corp:8080/Mail/V31/MailService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="MailService1.xsd" MetadataType="Schema" ID="55649ee1-6028-44b3-ac6a-de120a6cd16c" SourceId="1" SourceUrl="http://ssqapp02.buyabs.corp:8080/Mail/V31/MailService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MailManager.wsdl" MetadataType="Wsdl" ID="ceda8bd3-8943-498f-be6e-d4d7af8a3c62" SourceId="1" SourceUrl="http://ssqapp02.buyabs.corp:8080/Mail/V31/MailService.svc?wsdl" />
+    <MetadataFile FileName="MailService.disco" MetadataType="Disco" ID="d3b5298e-cede-4b51-bd6a-5c216f2a8592" SourceId="1" SourceUrl="http://ssqapp02.buyabs.corp:8080/Mail/V31/MailService.svc?disco" />
+    <MetadataFile FileName="MailService2.xsd" MetadataType="Schema" ID="a6b9f4c8-5d52-4af0-a8a7-fabf8d7ddcf9" SourceId="1" SourceUrl="http://ssqapp02.buyabs.corp:8080/Mail/V31/MailService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

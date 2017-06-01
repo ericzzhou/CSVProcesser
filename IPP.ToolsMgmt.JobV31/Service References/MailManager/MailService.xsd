@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://oversea.newegg.com/Framework/EMail/ServiceContract" elementFormDefault="qualified" targetNamespace="http://oversea.newegg.com/Framework/EMail/ServiceContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ssqapp02.buyabs.corp:8080/Mail/V31/MailService.svc?xsd=xsd2" namespace="http://oversea.newegg.com/Framework/EMail/DataContract" />
+  <xs:element name="SendMail_Simply">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="from" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="to" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="subject" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="body" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMail_SimplyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendMail_SimplyResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMail_Advanced">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="from" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="to" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bcc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="subject" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="body" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isHtmlBody" type="xs:boolean" />
+        <xs:element minOccurs="0" name="needLog" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMail_AdvancedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendMail_AdvancedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMail_AdvancedWithEncoding">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="from" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="to" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bcc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="subject" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="body" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://oversea.newegg.com/Framework/EMail/DataContract" minOccurs="0" name="subjectEncoding" type="q1:MailEncoding" />
+        <xs:element xmlns:q2="http://oversea.newegg.com/Framework/EMail/DataContract" minOccurs="0" name="bodyEncoding" type="q2:MailEncoding" />
+        <xs:element minOccurs="0" name="isHtmlBody" type="xs:boolean" />
+        <xs:element minOccurs="0" name="needLog" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMail_AdvancedWithEncodingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendMail_AdvancedWithEncodingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMail_Fully">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://oversea.newegg.com/Framework/EMail/DataContract" minOccurs="0" name="mail" nillable="true" type="q3:MailContract" />
+        <xs:element minOccurs="0" name="needLog" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMail_FullyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendMail_FullyResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

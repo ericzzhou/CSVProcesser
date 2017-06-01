@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.BasicHttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;EdpSendEmail&quot; /&gt;" bindingType="basicHttpBinding" name="EdpSendEmail" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://ssqapp02.buyabs.corp:8080/Mail/V31/MailService.svc&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;EdpSendEmail&quot; contract=&quot;MailManager.ISendEmail&quot; name=&quot;EdpSendEmail&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://ssqapp02.buyabs.corp:8080/Mail/V31/MailService.svc&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;EdpSendEmail&quot; contract=&quot;MailManager.ISendEmail&quot; name=&quot;EdpSendEmail&quot; /&gt;" contractName="MailManager.ISendEmail" name="EdpSendEmail" />
+  </endpoints>
+</configurationSnapshot>

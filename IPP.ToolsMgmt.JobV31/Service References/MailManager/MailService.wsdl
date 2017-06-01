@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://oversea.newegg.com/Framework/EMail/ServiceContract" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://oversea.newegg.com/Framework/EMail/ServiceContract" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://oversea.newegg.com/Framework/EMail/ServiceContract/Imports">
+      <xsd:import schemaLocation="http://ssqapp02.buyabs.corp:8080/Mail/V31/MailService.svc?xsd=xsd0" namespace="http://oversea.newegg.com/Framework/EMail/ServiceContract" />
+      <xsd:import schemaLocation="http://ssqapp02.buyabs.corp:8080/Mail/V31/MailService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://ssqapp02.buyabs.corp:8080/Mail/V31/MailService.svc?xsd=xsd2" namespace="http://oversea.newegg.com/Framework/EMail/DataContract" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISendEmail_SendMail_Simply_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMail_Simply" />
+  </wsdl:message>
+  <wsdl:message name="ISendEmail_SendMail_Simply_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMail_SimplyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISendEmail_SendMail_Advanced_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMail_Advanced" />
+  </wsdl:message>
+  <wsdl:message name="ISendEmail_SendMail_Advanced_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMail_AdvancedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISendEmail_SendMail_AdvancedWithEncoding_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMail_AdvancedWithEncoding" />
+  </wsdl:message>
+  <wsdl:message name="ISendEmail_SendMail_AdvancedWithEncoding_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMail_AdvancedWithEncodingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISendEmail_SendMail_Fully_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMail_Fully" />
+  </wsdl:message>
+  <wsdl:message name="ISendEmail_SendMail_Fully_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMail_FullyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISendEmail">
+    <wsdl:operation name="SendMail_Simply">
+      <wsdl:input wsaw:Action="http://oversea.newegg.com/Framework/EMail/ServiceContract/ISendEmail/SendMail_Simply" message="tns:ISendEmail_SendMail_Simply_InputMessage" />
+      <wsdl:output wsaw:Action="http://oversea.newegg.com/Framework/EMail/ServiceContract/ISendEmail/SendMail_SimplyResponse" message="tns:ISendEmail_SendMail_Simply_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail_Advanced">
+      <wsdl:input wsaw:Action="http://oversea.newegg.com/Framework/EMail/ServiceContract/ISendEmail/SendMail_Advanced" message="tns:ISendEmail_SendMail_Advanced_InputMessage" />
+      <wsdl:output wsaw:Action="http://oversea.newegg.com/Framework/EMail/ServiceContract/ISendEmail/SendMail_AdvancedResponse" message="tns:ISendEmail_SendMail_Advanced_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail_AdvancedWithEncoding">
+      <wsdl:input wsaw:Action="http://oversea.newegg.com/Framework/EMail/ServiceContract/ISendEmail/SendMail_AdvancedWithEncoding" message="tns:ISendEmail_SendMail_AdvancedWithEncoding_InputMessage" />
+      <wsdl:output wsaw:Action="http://oversea.newegg.com/Framework/EMail/ServiceContract/ISendEmail/SendMail_AdvancedWithEncodingResponse" message="tns:ISendEmail_SendMail_AdvancedWithEncoding_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail_Fully">
+      <wsdl:input wsaw:Action="http://oversea.newegg.com/Framework/EMail/ServiceContract/ISendEmail/SendMail_Fully" message="tns:ISendEmail_SendMail_Fully_InputMessage" />
+      <wsdl:output wsaw:Action="http://oversea.newegg.com/Framework/EMail/ServiceContract/ISendEmail/SendMail_FullyResponse" message="tns:ISendEmail_SendMail_Fully_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
